@@ -6,5 +6,8 @@ gdrive_download () {
 
 echo "Downloading model weight"
 gdrive_download 13Enbld9Z8SMoHvfYE2tXNecdmQVKPqpO model.pb
+mv model.pb model
 echo "Downloading shadow dataset"
 gdrive_download 1gvy0xELe6ZzL0rPEMrJ70XDq33le6reU Shadow-AR.zip
+unzip -q Shadow-AR.zip -d ShadowAR
+rm -f Shadow-AR.zip
