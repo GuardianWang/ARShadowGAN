@@ -3,6 +3,8 @@ import os.path as osp
 import cv2 as cv
 import numpy as np
 import tensorflow as tf
+if tf.__version__.startswith('2'):
+    tf = tf.compat.v1
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
